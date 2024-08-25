@@ -13,4 +13,7 @@ export class ShipmentCosts {
 
   @Column()
   total_costs: number;
+
+  @Column()
+  cost_status: string;
 }
