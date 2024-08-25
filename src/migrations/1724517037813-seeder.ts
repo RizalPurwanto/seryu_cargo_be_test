@@ -11,14 +11,13 @@ export class Seed1724517037813 implements MigrationInterface {
           columns: true,
           cast: (value, context) => {
             if (context.header) {
-              return value; // Don't cast the header row
+              return value;
             }
 
-            // Cast 'true'/'false' to boolean
             if (value === 'true') return true;
             if (value === 'false') return false;
 
-            return value; // Return the original value for other cases
+            return value;
           },
         }),
       )
